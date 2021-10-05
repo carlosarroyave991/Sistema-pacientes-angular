@@ -1,0 +1,49 @@
+<app-header></app-header>
+<div class="container">
+  <form [formGroup]="editarForm" (ngSubmit)="postForm(editarForm.value)">
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Nombre</label>
+      <input type="text" class="form-control" placeholder="Nombre del paciente" formControlName="nombre">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Direccion</label>
+      <input type="text" class="form-control" placeholder="Direccion del paciente" formControlName="direccion">
+    </div>
+    <div class="form-group row">
+      <div class="col">
+        <label for="exampleFormControlInput1">DNI</label>
+        <input type="text" class="form-control" placeholder="DNI" formControlName="dni">
+      </div>
+      <div class="col">
+        <label for="exampleFormControlInput1">Codigo Postal</label>
+        <input type="text" class="form-control" placeholder="Codigo Postal" formControlName="codigoPostal">
+      </div>
+      <div class="col">
+        <label for="exampleFormControlInput1">Telefono</label>
+        <input type="text" class="form-control" placeholder="Telefono" formControlName="telefono">
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col">
+        <label for="exampleFormControlInput1">Fecha Nacimiento</label>
+        <input type="date" class="form-control" placeholder="Fecha de nacimiento" formControlName="fechaNacimiento">
+      </div>
+      <div class="col">
+        <label for="exampleFormControlInput1">Correo</label>
+        <input type="email" class="form-control" placeholder="Correo" formControlName="correo">
+      </div>
+      <div class="col">
+        <label for="exampleFormControlInput1">Genero</label>
+        <select   class="form-select" formControlName="genero">
+          <option selected>Seleccione una Opcion</option>
+          <option value="F">F</option>
+          <option value="F">M</option>
+        </select>
+      </div>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <button type="button" class="btn btn-danger" (click)="eliminar()">Eliminar</button>
+  </form>
+</div>
+<app-footer></app-footer>
